@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <link rel="stylesheet" href="Exercicio01.css">
+</head>
+
+<body>
+    <header>
+        <h1> Lista de tarefas </h1>
+    </header>
+
+    <main>
+        <input type="text" id="tarefa" placeholder="Digite uma tarefa:">
+        <button onclick="adicionarTarefa()">Adicionar</button>
+
+        <ul id="Lista">
+            <li>Primeiro item</li>
+            <li>Segundo item</li>
+            <li>Terceiro item</li>
+
+        </ul>
+
+    </main>
+
+    <footer>
+    </footer>
+
+</body>
+<script>
+    function adicionarTarefa() {
+        // cadatrar um item na lista 
+        //1- preciso ter o valor escrito da tarefa pelo usuario
+
+        let valorInput = document.getElementById("tarefa").value;
+
+        // console.log(valorInput);
+        //2- Criar a tarefa na lista
+        let itemLista = document.createElement("li");
+        itemLista.innerText = valorInput;
+
+        //Cadastrando novo item ABAIXO do anterior
+        document.getElementById("Lista").appendChild(itemLista);
+
+        //3- Botao de excluir
+        let botaoExcluir = document.createElement("button");
+        botaoExcluir.innerText = "Remover item";
+        itemLista.appendChild(botaoExcluir);
+
+        //4- assim que eu clicar no botao excluir ele ira junto com o item
+        // botaoExcluir.onclick = function (){
+        //     itemLista.remove();
+        // }
+
+        // () => : igual a function
+        // onclick : ao clicar no botao  
+        botaoExcluir.onclick = () => {
+            itemLista.remove();
+        }
+
+        document.getElementById("tarefa").value = "";
+    }
+
+
+</script>
+
+</html>

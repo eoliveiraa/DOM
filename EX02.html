@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo claro e Escuro</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="modo">Modo Claro/Escuro</h1>
+    </header>
+    <main>
+        <button onclick="mudarTema()">Trocar Tema</button>
+    </main>
+    <footer></footer>
+</body>
+<script>
+    function mudarTema() {
+        
+        if (document.body.style.backgroundColor === 'black') {
+            document.body.style.backgroundColor = 'white'
+            document.body.style.color = 'black'
+        } else {
+            document.body.style.backgroundColor = 'black'
+            document.body.style.color = 'white'
+
+        }
+
+        //document.body.style.backgroundColor === 'black' = acessa o css do body que se for 
+        // naturalmente preto, ao clicar no botao se tornara branco com o texto preto
+
+        // .color = cor do texto
+        // .backgroundColor = cor do fundo do texto
+
+        //Caso o fundo seja naturalmente branco ao clicar no botao a
+        //  cor do texto se tornara branco e o fundo preto (alternar a ordem das cores)
+
+    }
+</script>
+
+</html>

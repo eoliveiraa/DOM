@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Ex01css.css">
+</head>
+
+<body>
+    <header>
+        <h1>Camisetas</h1>
+        <p>
+            Camiseta Branca - R$50,00
+            <button onclick="adicionarBranca()" id="adicionar-branca">Adicionar ao carrinho</button>
+        </p>
+
+        <p>
+            Camiseta Preta - R$40,00
+            <button onclick="adicionarPreta()" id="adicionar-preta">Adicionar ao carrinho</button>
+        </p>
+
+
+    </header>
+
+    <h2>Carrinho:</h2>
+    <ul id="listaDeTarefas"></ul>
+    <p>Total:</p>
+
+    <script>
+        function adicionarBranca() {
+            adicionarItem("Camiseta Branca - R$50,00");
+        }
+        //Adicionando itens no carrinho (lista)
+        function adicionarPreta() {
+            adicionarItem("Camiseta Preta - R$40,00");
+        }
+
+
+        function adicionarItem(itemTexto) {
+            let itemLista = document.createElement("li");
+            itemLista.innerText = itemTexto;
+
+            //excluir o item que foi adicionado 
+            let botaoExcluir = document.createElement("button");
+            botaoExcluir.innerText = "Remover item";
+            botaoExcluir.onclick = function () {
+                itemLista.remove();
+            };
+
+            //botao
+            itemLista.appendChild(botaoExcluir);
+            document.getElementById("listaDeTarefas").appendChild(itemLista);
+        }
+
+        function somar() {
+let preco = camisetaPreta + 
+        }
+
+
+
+    </script>
+</body>
+
+</html>
